@@ -9,7 +9,12 @@ from Crypto.Random import get_random_bytes
 import sys
 import timeit
 
-data = 'I met aliens in UFO. Here is the map.'.encode("utf-8")
+def read_file(file_path):
+    with open(file_path, 'r', encoding='utf-8') as file:
+        return file.read().encode("utf-8")
+
+file_path = '../bacon-ipsum-dolor-amet-pancetta-rib.txt'
+data = read_file(file_path)
 
 #  Você deve informar o algoritmo e os parâmetros na variável cipher_suite.
 
